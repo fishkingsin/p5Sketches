@@ -10,7 +10,8 @@ function draw() {
     for (var i = 0; i < width; i += step) {
       var tx = i+step*0.5;
       var ty = j+step*0.5;
-      var radius = sin((millis()*0.0005)*PI*(i/width+j/height))*step;
+      var radius = sin((millis()*0.0005)*PI+(i/width+j/height))*step;
+      // var radius = sin((millis()*0.0005)*PI*(i/width+j/height))*step;
       ellipse(tx, ty, radius, radius);
     }
   }
